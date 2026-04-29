@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goodnight Book Generator — Little Tails Co.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">L I T T L E &nbsp; T A I L S &nbsp; C O .</div>
+      <h1>Goodnight Book Generator</h1>
+      <div class="subtitle">Where Every Story Begins With Your Child</div>
+    </header>
+
+    <div class="mode-toggle">
+      <button id="mode-library" class="active" type="button">Library mode</button>
+      <button id="mode-custom" type="button">Custom mode</button>
+    </div>
+
+    <!-- LIBRARY MODE -->
+    <section id="panel-library" class="panel">
+      <h2>1. Pick a character</h2>
+      <div id="char-grid" class="char-grid"></div>
+
+      <div class="field" style="margin-top: 24px;">
+        <label for="lib-name">Child's name</label>
+        <input type="text" id="lib-name" placeholder="e.g. Oliver" maxlength="30" />
+        <div class="hint">Appears on cover, dedication, throughout the rhyme, and back cover.</div>
+      </div>
+
+      <div class="action-row">
+        <button id="lib-generate" class="btn-primary" type="button">Generate Book PDF</button>
+        <span id="lib-status" class="status-msg"></span>
+      </div>
+    </section>
+
+    <!-- CUSTOM MODE -->
+    <section id="panel-custom" class="panel hidden">
+      <h2>1. Upload custom character scenes</h2>
+      <p style="margin: 0 0 16px; font-size: 14px; opacity: 0.85;">
+        Generate the 13 scenes for the custom character in Leonardo, download them, then drop each into its slot below.
+        Files stay in your browser — nothing is uploaded anywhere.
+      </p>
+      <div id="upload-grid" class="upload-grid"></div>
+
+      <div class="field" style="margin-top: 24px;">
+        <label for="custom-name">Child's name</label>
+        <input type="text" id="custom-name" placeholder="e.g. Oliver" maxlength="30" />
+      </div>
+
+      <div class="action-row">
+        <button id="custom-generate" class="btn-primary" type="button">Generate Book PDF</button>
+        <span id="custom-status" class="status-msg"></span>
+      </div>
+    </section>
+
+    <!-- ORDER LOG -->
+    <section class="panel">
+      <h2>Order log</h2>
+      <p style="margin: 0 0 12px; font-size: 13px; opacity: 0.75;">
+        Last 50 PDFs generated on this device. Stored locally in your browser.
+      </p>
+      <div id="order-log" class="order-log"></div>
+      <div style="margin-top: 12px;">
+        <button id="clear-log" class="btn-secondary" type="button">Clear log</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- pdf-lib (no fontkit needed since we're using StandardFonts) -->
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

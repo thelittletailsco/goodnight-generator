@@ -1,0 +1,69 @@
+{
+  "brand": {
+    "name": "LITTLE TAILS CO.",
+    "tagline": "Where Every Story Begins With Your Child",
+    "title": "Goodnight, Little"
+  },
+  "colors": {
+    "navy": "#3D556E",
+    "cream": "#FAF3D6",
+    "yellow": "#F5C84B",
+    "white": "#FFFFFF",
+    "navyText": "#3D556E"
+  },
+  "characters": [
+    { "id": "boy_01", "label": "Boy 1" },
+    { "id": "boy_02", "label": "Boy 2" },
+    { "id": "boy_03", "label": "Boy 3" },
+    { "id": "boy_04", "label": "Boy 4" },
+    { "id": "boy_05", "label": "Boy 5" },
+    { "id": "boy_06", "label": "Boy 6" },
+    { "id": "girl_01", "label": "Girl 1" },
+    { "id": "girl_02", "label": "Girl 2" },
+    { "id": "girl_03", "label": "Girl 3" },
+    { "id": "girl_04", "label": "Girl 4" },
+    { "id": "girl_05", "label": "Girl 5" },
+    { "id": "girl_06", "label": "Girl 6" }
+  ],
+  "scenes": [
+    { "key": "cover",          "filename": "cover.jpg",            "label": "Cover" },
+    { "key": "s1_sunset",      "filename": "s1_sunset.jpg",        "label": "1 - Sunset" },
+    { "key": "s2_bath",        "filename": "s2_bath.jpg",          "label": "2 - Bath" },
+    { "key": "s3_pajamas",     "filename": "s3_pajamas.jpg",       "label": "3 - Pajamas" },
+    { "key": "s4_teeth",       "filename": "s4_teeth.jpg",         "label": "4 - Teeth" },
+    { "key": "s5_toys",        "filename": "s5_toys.jpg",          "label": "5 - Toys" },
+    { "key": "s6_hug",         "filename": "s6_hug.jpg",           "label": "6 - Hug" },
+    { "key": "s7_reach",       "filename": "s7_reach.jpg",         "label": "7 - Reach" },
+    { "key": "s8_reading",     "filename": "s8_reading.jpg",       "label": "8 - Reading" },
+    { "key": "s10_back_awake", "filename": "s10_back_awake.jpg",   "label": "10 - In bed (awake)" },
+    { "key": "s11_yawn",       "filename": "s11_yawn.jpg",         "label": "11 - Yawn" },
+    { "key": "s13_curl_hug",   "filename": "s13_curl_hug.jpg",     "label": "13 - Curl hug" },
+    { "key": "s14_back_sparkles","filename": "s14_back_sparkles.jpg","label": "14 - Asleep with sparkles" }
+  ],
+  "spreads": [
+    { "page": 1,  "image": "char/s1_sunset",       "lines": ["The sun is setting low and bright —", "{NAME}'s day is fading into night."] },
+    { "page": 2,  "image": "char/s2_bath",         "lines": ["Splish and splash and bubbles pop —", "{NAME}'s bath-time fun won't stop!"] },
+    { "page": 3,  "image": "char/s3_pajamas",      "lines": ["Soft pajamas, snug and right,", "{NAME} is ready for the night."] },
+    { "page": 4,  "image": "char/s4_teeth",        "lines": ["Up and down and side to side,", "{NAME}'s teeth shine with sparkle-pride."] },
+    { "page": 5,  "image": "char/s5_toys",         "lines": ["Goodnight, blocks. Goodnight, bear.", "{NAME} tucks each toy with care."] },
+    { "page": 6,  "image": "char/s6_hug",          "lines": ["A cozy kiss, a gentle hug,", "Goodnight, {NAME}, little snuggle-bug."] },
+    { "page": 7,  "image": "char/s7_reach",        "lines": ["Pick a story, snuggle near —", "{NAME}'s favorite words to hear."] },
+    { "page": 8,  "image": "char/s8_reading",      "lines": ["Pages turn, both soft and slow,", "Sleepy thoughts begin to grow."] },
+    { "page": 9,  "image": "bg/bg09",              "lines": ["A little lamp begins to glow,", "{NAME} is warm from head to toe."] },
+    { "page": 10, "image": "char/s10_back_awake",  "lines": ["Covers snug, from chin to toe,", "{NAME}'s ready — off we go."] },
+    { "page": 11, "image": "char/s11_yawn",        "lines": ["Stuffed friends close, and pillow deep,", "{NAME} is safe, and soon asleep."] },
+    { "page": 12, "image": "bg/bg12",              "lines": ["The moon peeks in and says hello,", "“Goodnight, {NAME},” whispered low."] },
+    { "page": 13, "image": "char/s13_curl_hug",    "lines": ["Eyes grow heavy, breath grows deep,", "{NAME} is drifting, off to sleep."] },
+    { "page": 14, "image": "char/s14_back_sparkles","lines": ["Goodnight, little {NAME} — sleep tight.", "Dream sweetly through the gentle night."] }
+  ],
+  "dedication": {
+    "linePre": "This book belongs to",
+    "linePost": "with love ∼"
+  },
+  "back": {
+    "thumb": "char/cover",
+    "marketing": "A cozy rhyming ride-along through your child's very own bedtime. From the last warm moments of the day through splashy baths, soft pajamas, snuggled stories, and the first drowsy yawns — every page whispers your child's name into the gentle routine that leads to sleep.",
+    "subline": "Written for ages 0–4. A keepsake gift for baby showers, first birthdays, and every bedtime in between.",
+    "customMade": "Custom-made for {NAME}."
+  }
+}
