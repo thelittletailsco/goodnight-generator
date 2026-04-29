@@ -231,7 +231,7 @@ async function buildBook(name, imageGetter) {
     const txtPg = pdfDoc.addPage([PAGE, PAGE]);
     fillBg(txtPg, CREAM);
     drawCrescent(txtPg, PAGE - 60, PAGE - 60, 18, YELLOW, CREAM);
-    drawDot(txtPg, 60, 70, 6, YELLOW);
+    drawStar(txtPg, 60, 70, 8, YELLOW);
 
     const line1 = sub(spread.lines[0]);
     const line2 = sub(spread.lines[1]);
@@ -362,6 +362,31 @@ function drawCrescent(page, cx, cy, r, color, bgColor) {
 function drawDot(page, cx, cy, r, color) {
   const { rgb } = PDFLib;
   page.drawCircle({ x: cx, y: cy, size: r, color: rgb(color.r, color.g, color.b) });
+}
+
+// 5-point star, point UP. Outer radius R, inner radius 0.4R.
+// SVG path uses y-down convention; pdf-lib auto-flips when drawing onto a PDF page.
+function drawStar(page, cx, cy, R, color) {
+  const { rgb } = PDFLib;
+  const inner = R * 0.4;
+  const pts = [];
+  for (let i = 0; i < 10; i++) {
+    const radius = (i % 2 === 0) ? R : inner;
+    const angleDeg = -90 + (i * 36); // start at top, go clockwise
+    const a = angleDeg * Math.PI / 180;
+    pts.push([
+      (Math.cos(a) * radius).toFixed(2),
+      (Math.sin(a) * radius).toFixed(2)
+    ]);
+  }
+  let path = `M ${pts[0][0]} ${pts[0][1]}`;
+  for (let i = 1; i < 10; i++) path += ` L ${pts[i][0]} ${pts[i][1]}`;
+  path += ' Z';
+  page.drawSvgPath(path, {
+    x: cx,
+    y: cy,
+    color: rgb(color.r, color.g, color.b),
+  });
 }
 
 // ---------- Utilities ----------
