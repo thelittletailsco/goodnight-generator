@@ -195,10 +195,10 @@ async function buildBook(name, imageGetter) {
   cover.drawImage(coverImg, { x: 0, y: bandH, width: PAGE, height: PAGE - bandH });
   // Navy band
   cover.drawRectangle({ x: 0, y: 0, width: PAGE, height: bandH, color: rgb(NAVY.r, NAVY.g, NAVY.b) });
-  drawSpacedText(cover, 'LITTLE TAILS CO.', 138, 9, fonts.helvBold, WHITE, 4);
-  drawCentered(cover, 'Goodnight, Little', 100, 22, fonts.timesBold, WHITE);
-  drawCentered(cover, name, 50, 36, fonts.helvBold, YELLOW);
-  drawCentered(cover, CONFIG.brand.tagline, 22, 9, fonts.timesItalic, WHITE);
+  drawSpacedText(cover, 'LITTLE TAILS CO.', 142, 9, fonts.helvBold, WHITE, 4);
+  drawCentered(cover, 'Goodnight, Little', 110, 22, fonts.timesBold, WHITE);
+  drawCentered(cover, name, 55, 44, fonts.helvBold, YELLOW);
+  drawCentered(cover, CONFIG.brand.tagline, 18, 9, fonts.timesItalic, WHITE);
 
   // ----- Page 2: Title page (cream) -----
   const title = pdfDoc.addPage([PAGE, PAGE]);
@@ -247,13 +247,13 @@ async function buildBook(name, imageGetter) {
   // ----- Back cover -----
   const back = pdfDoc.addPage([PAGE, PAGE]);
   fillBg(back, NAVY);
-  drawSpacedText(back, 'LITTLE TAILS CO.', PAGE - 40, 11, fonts.helvBold, WHITE, 5);
+  drawSpacedText(back, 'LITTLE TAILS CO.', 545, 11, fonts.helvBold, WHITE, 5);
   const thumb = await embedImage(CONFIG.back.thumb);
-  back.drawImage(thumb, { x: PAGE/2 - 100, y: 340, width: 200, height: 200 });
-  drawWrapped(back, sub(CONFIG.back.marketing), 60, 310, PAGE - 120, 10, fonts.times, WHITE, 14);
-  drawWrapped(back, CONFIG.back.subline, 60, 215, PAGE - 120, 9, fonts.timesItalic, WHITE, 12);
-  drawSegmentLine(back, sub(CONFIG.back.customMade), 130, 14, fonts, WHITE, YELLOW, name);
-  drawCentered(back, CONFIG.brand.tagline, 80, 9, fonts.timesItalic, WHITE);
+  back.drawImage(thumb, { x: PAGE/2 - 95, y: 320, width: 190, height: 190 });
+  drawWrapped(back, sub(CONFIG.back.marketing), 60, 290, PAGE - 120, 10, fonts.times, WHITE, 14);
+  drawWrapped(back, CONFIG.back.subline, 60, 200, PAGE - 120, 10, fonts.timesItalic, WHITE, 12);
+  drawSegmentLine(back, sub(CONFIG.back.customMade), 125, 14, fonts, WHITE, YELLOW, name);
+  drawCentered(back, CONFIG.brand.tagline, 70, 9, fonts.timesItalic, WHITE);
 
   return await pdfDoc.save();
 }
