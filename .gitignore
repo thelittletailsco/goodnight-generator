@@ -1,0 +1,14 @@
+# Scratch/audit files (Claude session)
+_audit_*.png
+_corner_audit.png
+_zoom_top16.png
+_boy_04_compare.png
+_pdf_p08.png
+all_corners_*.png
+mask_*.png
+page-*.png
+v[0-9]_*.png
+v[0-9]mask_*.png
+test_*.png
+v[0-9]_zoom_*.png
+assets/characters_original_backup/
